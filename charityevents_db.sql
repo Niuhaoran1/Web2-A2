@@ -66,3 +66,4 @@ INSERT INTO events (event_name, category_id, org_id, event_date, location, purpo
 ('珀斯无声拍卖会', 3, 2, '2025-11-01 10:00:00', '珀斯文化中心', '为儿童图书馆筹集书籍资金', '拍卖物品包括稀有书籍和文化纪念品', 0.00, '免费入场，欢迎捐赠书籍', 1, 'https://example.com/images/perth_auction.jpg'),
 ('阿德莱德公益骑行', 1, 1, '2025-10-29 08:30:00', '阿德莱德中央广场', '为残疾人筹集无障碍设施资金', '10公里骑行，提供骑行装备租赁', 60.00, '含骑行装备和安全头盔', 1, 'https://example.com/images/adelaide_cycle.jpg'),
 ('堪培拉慈善音乐会', 2, 2, '2025-12-12 19:30:00', '堪培拉国家剧院', '为心理健康公益项目筹集资金', '古典音乐演奏会，邀请知名乐团', 120.00, '含音乐会门票和纪念CD', 1, 'https://example.com/images/canberra_concert.jpg');
+

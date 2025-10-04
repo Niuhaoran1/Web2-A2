@@ -5,7 +5,6 @@ const eventRoutes = require('./routes/eventRoutes');
 const { testDbConnection } = require('./config/event_db'); 
 
 const app = express();
-
 // 中间件配置（不变）
 app.use(cors());
 app.use(express.json());

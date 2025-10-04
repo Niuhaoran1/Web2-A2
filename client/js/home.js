@@ -76,5 +76,11 @@ function formatDateTime(dateTimeStr) {
  * @returns {string} 格式化后的票价
  */
 function formatPrice(price) {
-  return price === 0 ? '免费' : `$${price.toFixed(2)}`;
+  // 先将 price 转换为数字（处理字符串或 null/undefined 的情况）
+  const numericPrice = Number(price);
+  // 检查转换后是否为有效数字
+  if (isNaN(numericPrice)) {
+    return '价格未知'; // 兜底显示
+  }
+  return numericPrice === 0 ? '免费' : `$${numericPrice.toFixed(2)}`;
 }
