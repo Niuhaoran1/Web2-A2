@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>搜索慈善活动</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <!-- 导航栏 -->
+  <nav class="nav-container">
+    <ul class="nav-menu">
+      <li><a href="index.html">首页</a></li>
+      <li><a href="search.html">搜索活动</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1 class="page-title">搜索慈善活动</h1>
+
+    <!-- 筛选表单 -->
+    <form id="search-form" class="search-form">
+      <div class="form-group">
+        <label for="search-date">活动日期（可选）</label>
+        <input type="date" id="search-date" name="date" class="form-control">
+        <small>提示：仅筛选指定日期举办的活动</small>
+      </div>
+
+      <div class="form-group">
+        <label for="search-location">活动地点（可选）</label>
+        <input type="text" id="search-location" name="location" class="form-control" placeholder="例如：悉尼、墨尔本">
+        <small>提示：支持模糊搜索（如输入“悉尼”可匹配“悉尼皇家植物园”）</small>
+      </div>
+
+      <div class="form-group">
+        <label for="search-category">活动类别（可选）</label>
+        <select id="search-category" name="categoryId" class="form-control">
+          <option value="">-- 选择类别 --</option>
+          <!-- JS动态加载类别选项 -->
+        </select>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">搜索活动</button>
+        <button type="button" id="clear-filters" class="btn btn-reset">清除筛选条件</button>
+      </div>
+    </form>
+
+    <!-- 筛选结果区域 -->
+    <section class="search-results">
+      <h2 class="page-title">搜索结果</h2>
+      <!-- 错误提示容器 -->
+      <div id="search-error" class="error-message" style="display: none;"></div>
+      <!-- 结果列表容器 -->
+      <div id="results-grid" class="events-grid"></div>
+    </section>
+  </div>
+
+  <script type="module" src="./js/search.js"></script>
+</body>
+</html>

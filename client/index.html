@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>慈善活动首页 - 连接爱心与行动</title>
+  <!-- 引入全局样式 -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <!-- 导航栏（所有页面共用） -->
+  <nav class="nav-container">
+    <ul class="nav-menu">
+      <li><a href="index.html">首页</a></li>
+      <li><a href="search.html">搜索活动</a></li>
+    </ul>
+  </nav>
+
+  <!-- 页面内容容器 -->
+  <div class="container">
+    <!-- 静态组织信息 -->
+    <section class="org-intro">
+      <h1 class="page-title">欢迎来到慈善活动平台</h1>
+      <p>我们致力于连接慈善组织与爱心人士，通过各类公益活动（趣味跑、慈善晚宴、拍卖会等）为弱势群体筹集资金，推动社会公益事业发展。</p>
+      <h3 style="margin: 1rem 0; color: #2c3e50;">我们的使命</h3>
+      <p>为贫困家庭提供教育与医疗援助，保护濒危物种与自然环境，构建更加公平、温暖的社会。</p>
+      <h3 style="margin: 1rem 0; color: #2c3e50;">联系方式</h3>
+      <p>邮箱：contact@charity-platform.org | 电话：+61-2-98765432</p>
+    </section>
+
+    <!-- 动态活动列表（API获取数据后渲染） -->
+    <section class="upcoming-events">
+      <h2 class="page-title">即将举行的慈善活动</h2>
+      <!-- 错误提示容器（默认隐藏） -->
+      <div id="home-error" class="error-message" style="display: none;"></div>
+      <!-- 活动网格（JS动态生成卡片） -->
+      <div id="events-grid" class="events-grid"></div>
+    </section>
+  </div>
+
+  <!-- 引入API工具和首页逻辑（type="module"支持ES6导入） -->
+  <script type="module" src="./js/home.js"></script>
+</body>
+</html>

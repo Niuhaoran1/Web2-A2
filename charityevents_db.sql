@@ -1,3 +1,4 @@
+-- Active: 1759559114460@@127.0.0.1@3306@charityevents_db
 -- 创建数据库（若不存在则创建）
 CREATE DATABASE IF NOT EXISTS charityevents_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
