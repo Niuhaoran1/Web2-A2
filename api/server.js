@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // 路由配置
-app.use('/api/events', eventRoutes);
+app.use('/api', eventRoutes);
 app.use('/api/categories', categoryRoutes);
 
 // 测试接口

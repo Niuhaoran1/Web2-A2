@@ -26,12 +26,21 @@ document.addEventListener('DOMContentLoaded', async () => {
   searchForm.addEventListener('submit', async (e) => {
     e.preventDefault(); // 阻止表单默认刷新行为
 
-    // 获取表单筛选条件（去空格，空值转为undefined）
-    const filters = {
-      date: searchForm.date.value.trim() || undefined,
-      location: searchForm.location.value.trim() || undefined,
-      categoryId: searchForm.categoryId.value || undefined
-    };
+    // 获取表单筛选条件（仅保留非空值，避免传递undefined）
+    const filters = {};
+    const dateValue = searchForm.date.value.trim();
+    const locationValue = searchForm.location.value.trim();
+    const categoryValue = searchForm.categoryId.value;
+
+    if (dateValue) {
+      filters.date = dateValue;
+    }
+    if (locationValue) {
+      filters.location = locationValue;
+    }
+    if (categoryValue) {
+      filters.categoryId = categoryValue;
+    }
 
     try {
       // 隐藏之前的错误提示
